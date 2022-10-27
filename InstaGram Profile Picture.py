@@ -10,7 +10,12 @@ def picture_download(username):
         os.chdir("d:/Notebook Ex/Python Codes/Insta Download")
         #"Download the data"
         return parser.download_profile(username,profile_pic_only=True)
-    
+    else:
+        #"Make Insta Download folder if doesn't exits"
+        os.mkdir("d:/Notebook Ex/Python Codes/Insta Download")
+        os.chdir("d:/Notebook Ex/Python Codes/Insta Download")
+        #"Download the Data"
+        return parser.download_profile(username,profile_pic_only=True) 
 
 if __name__ == "__main__":
     user=input("Enter Insta Account: ")
